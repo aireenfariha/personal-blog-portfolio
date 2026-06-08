@@ -6,25 +6,26 @@
     font-family: Arial, sans-serif;
 }
 
+/* Body & General */
 body {
-    background-color: #f4f4f4;
+    background-color: #f7f7f7;
     color: #333;
     line-height: 1.6;
-    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+/* Header & Navigation */
 header {
-    background-color: #6b4f4f;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
     color: white;
     text-align: center;
-    padding: 20px 0;
-    margin-bottom: 20px;
+    padding: 30px 20px;
 }
 
 nav a {
     color: white;
-    text-decoration: none;
     margin: 0 10px;
+    text-decoration: none;
     font-weight: bold;
 }
 
@@ -32,52 +33,109 @@ nav a:hover {
     text-decoration: underline;
 }
 
-button {
+button#darkModeBtn {
     margin-top: 10px;
     padding: 5px 10px;
     cursor: pointer;
 }
 
-main {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 800px;
-    margin: auto;
-}
-
-article {
-    margin-bottom: 20px;
-}
-
-article h2 {
-    color: #6b4f4f;
-}
-
-footer {
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    padding: 50px 20px;
+    background: #6a11cb;
+    color: #fff;
+}
+
+.hero img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid white;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* Main Content */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Skills Section */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.skill-card {
+    background: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-weight: bold;
+}
+
+/* Latest Posts */
+.latest-posts {
+    margin-bottom: 30px;
+}
+
+.latest-posts article {
+    background: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.latest-posts h2 {
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
     margin-top: 30px;
-    padding: 10px;
-    font-size: 0.9em;
-    color: #555;
 }
 
 /* Dark Mode */
 body.dark-mode {
-    background-color: #222;
-    color: #eee;
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
 body.dark-mode header {
-    background-color: #444;
+    background: #1a1a1a;
 }
 
-body.dark-mode main {
-    background-color: #333;
+body.dark-mode .hero {
+    background: #333;
+    color: #f7f7f7;
 }
 
-body.dark-mode article h2 {
-    color: #ffcc99;
+body.dark-mode .skill-card,
+body.dark-mode .latest-posts article {
+    background: #1f1f1f;
+    box-shadow: 0 2px 6px rgba(255,255,255,0.05);
 }
 
 /* Responsive */
@@ -85,5 +143,10 @@ body.dark-mode article h2 {
     nav a {
         display: block;
         margin: 5px 0;
+    }
+
+    .skills {
+        flex-direction: column;
+        align-items: center;
     }
 }

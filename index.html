@@ -6,26 +6,72 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Header & Navigation -->
     <header>
-        <h1>Welcome to My Blog</h1>
         <nav>
             <a href="index.html">Home</a> |
             <a href="about.html">About</a> |
             <a href="blog.html">Blog</a> |
             <a href="contact.html">Contact</a>
         </nav>
-        <button id="darkModeBtn">Toggle Dark Mode</button>
+        <button id="darkModeBtn">🌙 Toggle Dark Mode</button>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/profile.jpg" alt="Profile Picture">
+        <h1>Aireen Fariha</h1>
+        <p>Software Development Student | Web Development Enthusiast</p>
+    </section>
+
+    <!-- Main Content -->
     <main>
-        <h2>Home Page</h2>
-        <p>This is my first personal blog. Here I will share updates, thoughts, and sample posts.</p>
+        <!-- About Section -->
+        <section>
+            <h2>About Me</h2>
+            <p>
+                Welcome to my personal blog portfolio. This website showcases my
+                learning journey in web development, programming, and software
+                development projects. Here you will find sample posts, skills, and
+                other projects I am working on.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills">
+            <div class="skill-card">HTML</div>
+            <div class="skill-card">CSS</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">Git & GitHub</div>
+        </section>
+
+        <!-- Latest Blog Posts Section -->
+        <section class="latest-posts">
+            <h2>Latest Blog Posts</h2>
+
+            <article>
+                <h3>Learning JavaScript</h3>
+                <p>My experience learning JavaScript and building interactive websites.</p>
+            </article>
+
+            <article>
+                <h3>Responsive Web Design</h3>
+                <p>Tips and techniques for creating mobile-friendly websites.</p>
+            </article>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        &copy; 2026 My Personal Blog
+        &copy; 2026 Aireen Fariha - My Personal Blog
     </footer>
 
-    <script src="js/script.js"></script>
+    <!-- Dark Mode Script -->
+    <script>
+        const darkModeBtn = document.getElementById('darkModeBtn');
+        darkModeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
 </html>
