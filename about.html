@@ -2,30 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About Me</title>
+    <title>About</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>About Me</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="about.html">About</a> |
-            <a href="blog.html">Blog</a> |
-            <a href="contact.html">Contact</a>
-        </nav>
-        <button id="darkModeBtn">Toggle Dark Mode</button>
-    </header>
 
-    <main>
-        <h2>Hi! I'm Irene</h2>
-        <p>This is my personal blog page created for the CSD34203 project. I enjoy coding, learning new tech, and sharing ideas.</p>
-    </main>
+<header>
+    <h1>About Me</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <button id="darkModeBtn">Toggle Dark Mode</button>
+</header>
 
-    <footer>
-        &copy; 2026 My Personal Blog
-    </footer>
+<main>
 
-    <script src="js/script.js"></script>
+<div class="card">
+    <h2>Hi, I'm Aireen</h2>
+    <p>
+        A Software Development student from Faculty of Informatics and Computing (FIK).
+        I enjoy building websites and learning new technologies.
+    </p>
+</div>
+
+<div class="card">
+    <h2>Skills</h2>
+    <p>HTML, CSS, JavaScript, GitHub, Problem Solving</p>
+</div>
+
+<div class="card">
+    <h2>Goal</h2>
+    <p>To become a full-stack developer and build real-world applications.</p>
+</div>
+
+</main>
+
+<footer>
+    © 2026 Aireen Fariha
+</footer>
+
+<script>
+document.getElementById("darkModeBtn").onclick = () => {
+    document.body.classList.toggle("dark-mode");
+};
+</script>
+
 </body>
 </html>

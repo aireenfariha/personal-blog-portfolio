@@ -2,95 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aireen Fariha | Portfolio</title>
+    <title>Home | Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<!-- HEADER -->
 <header>
-    <div class="container nav">
-        <h2 class="logo">AireenF</h2>
-
-        <nav>
-            <a href="#">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#blog">Blog</a>
-            <a href="#contact">Contact</a>
-        </nav>
-
-        <button id="darkModeBtn">🌙</button>
-    </div>
+    <h1>Aireen Fariha</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <button id="darkModeBtn">Toggle Dark Mode</button>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-    <img src="images/profile.jpg" alt="Profile Picture">
-
-    <h1>Aireen Fariha</h1>
-    <p>Software Development Student | Web Developer | Problem Solver</p>
+    <img src="images/profile.jpg" alt="profile">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Software Development Student | Web Developer</p>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="card">
-    <h2>About Me</h2>
-    <p>
-        I am a Software Development student from Faculty of Informatics and Computing (FIK).
-        I enjoy building clean and functional websites using modern web technologies.
-    </p>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="card">
-    <h2>Skills</h2>
-
-    <div class="skills">
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">GitHub</div>
-    </div>
-</section>
-
-<!-- BLOG -->
-<section id="blog" class="card">
-    <h2>Blog / Projects</h2>
-
-    <div class="post">
-        <h3>Personal Blog Website</h3>
-        <p>Built using HTML, CSS and JavaScript with responsive design and dark mode feature.</p>
+<main>
+    <div class="card">
+        <h2>About This Website</h2>
+        <p>This is my personal GitHub portfolio built using HTML, CSS, and JavaScript.</p>
     </div>
 
-    <div class="post">
-        <h3>Learning Journey</h3>
-        <p>Improving my web development skills step by step through practice and projects.</p>
+    <div class="card">
+        <h2>Highlights</h2>
+        <p>✔ Responsive Design<br>
+           ✔ Dark Mode Feature<br>
+           ✔ Multiple Pages<br>
+           ✔ Clean UI (Army Green Theme)</p>
     </div>
-</section>
+</main>
 
-<!-- CONTACT -->
-<section id="contact" class="card">
-    <h2>Contact</h2>
-
-    <p>Email: aireenfariha16@gmail.com</p>
-    <p>GitHub: github.com/aireenfariha</p>
-    <p>Location: Johor, Malaysia</p>
-</section>
-
-<!-- FOOTER -->
 <footer>
-    <p>© 2026 Aireen Fariha | FIK Student Portfolio</p>
+    © 2026 Aireen Fariha | FIK Project
 </footer>
 
-<!-- DARK MODE -->
 <script>
-    const btn = document.getElementById("darkModeBtn");
-
-    btn.onclick = () => {
-        document.body.classList.toggle("dark-mode");
-    }
+document.getElementById("darkModeBtn").onclick = () => {
+    document.body.classList.toggle("dark-mode");
+};
 </script>
 
 </body>
