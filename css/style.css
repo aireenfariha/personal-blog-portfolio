@@ -1,4 +1,4 @@
-/* Reset */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -6,147 +6,155 @@
     font-family: Arial, sans-serif;
 }
 
-/* Body & General */
-body {
-    background-color: #f7f7f7;
-    color: #333;
-    line-height: 1.6;
-    transition: background-color 0.3s, color 0.3s;
+/* COLORS */
+:root {
+    --army-green: #556B2F;
+    --light-green: #8FBC8F;
+    --white: #ffffff;
+    --text-dark: #2f3b1c;
 }
 
-/* Header & Navigation */
+/* BODY */
+body {
+    background: #f5f7f2;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* HEADER */
 header {
-    background: linear-gradient(90deg, #6a11cb, #2575fc);
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
+    background: var(--army-green);
+    color: var(--white);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 nav a {
-    color: white;
+    color: var(--white);
     margin: 0 10px;
     text-decoration: none;
     font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: var(--light-green);
 }
 
-button#darkModeBtn {
-    margin-top: 10px;
-    padding: 5px 10px;
+button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
     cursor: pointer;
+    background: var(--light-green);
+    color: var(--white);
 }
 
-/* Hero Section */
+button:hover {
+    background: var(--army-green);
+}
+
+/* HERO */
 .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
-    padding: 50px 20px;
-    background: #6a11cb;
-    color: #fff;
+    padding: 70px 20px;
+    background: var(--army-green);
+    color: var(--white);
 }
 
+/* PROFILE IMAGE */
 .hero img {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
-    margin-bottom: 20px;
-    border: 3px solid white;
-}
-
-.hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.2em;
-}
-
-/* Main Content */
-main {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 20px;
-}
-
-/* Skills Section */
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
-}
-
-.skill-card {
-    background: white;
-    padding: 15px 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    font-weight: bold;
-}
-
-/* Latest Posts */
-.latest-posts {
-    margin-bottom: 30px;
-}
-
-.latest-posts article {
-    background: white;
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.latest-posts h2 {
+    object-fit: cover;
+    border: 4px solid var(--white);
     margin-bottom: 15px;
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
+/* CARD SECTIONS */
+.card {
+    background: var(--white);
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+/* SKILLS */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.skill {
+    background: var(--army-green);
+    color: var(--white);
+    padding: 12px;
     text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* BLOG POST */
+.post {
+    margin-top: 15px;
     padding: 15px;
-    margin-top: 30px;
+    border-left: 4px solid var(--army-green);
+    background: #f7f9f3;
+    border-radius: 8px;
 }
 
-/* Dark Mode */
-body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--army-green);
+    color: var(--white);
+    margin-top: 40px;
 }
 
-body.dark-mode header {
-    background: #1a1a1a;
+/* DARK MODE */
+.dark-mode {
+    background: #1b1f14;
+    color: #e6eed7;
 }
 
-body.dark-mode .hero {
-    background: #333;
-    color: #f7f7f7;
+.dark-mode .card {
+    background: #2a321d;
+    color: var(--white);
 }
 
-body.dark-mode .skill-card,
-body.dark-mode .latest-posts article {
-    background: #1f1f1f;
-    box-shadow: 0 2px 6px rgba(255,255,255,0.05);
+.dark-mode .post {
+    background: #3a4428;
 }
 
-/* Responsive */
-@media(max-width: 600px) {
-    nav a {
-        display: block;
-        margin: 5px 0;
-    }
+.dark-mode header {
+    background: #2f3b1c;
+}
 
-    .skills {
-        flex-direction: column;
-        align-items: center;
-    }
+.dark-mode .hero {
+    background: #3f4d24;
 }

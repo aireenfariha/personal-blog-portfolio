@@ -2,76 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Personal Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aireen Fariha | Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <!-- Header & Navigation -->
-    <header>
+
+<!-- HEADER -->
+<header>
+    <div class="container nav">
+        <h2 class="logo">AireenF</h2>
+
         <nav>
-            <a href="index.html">Home</a> |
-            <a href="about.html">About</a> |
-            <a href="blog.html">Blog</a> |
-            <a href="contact.html">Contact</a>
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
         </nav>
-        <button id="darkModeBtn">🌙 Toggle Dark Mode</button>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <img src="images/profile.jpg" alt="Profile Picture">
-        <h1>Aireen Fariha</h1>
-        <p>Software Development Student | Web Development Enthusiast</p>
-    </section>
+        <button id="darkModeBtn">🌙</button>
+    </div>
+</header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- About Section -->
-        <section>
-            <h2>About Me</h2>
-            <p>
-                Welcome to my personal blog portfolio. This website showcases my
-                learning journey in web development, programming, and software
-                development projects. Here you will find sample posts, skills, and
-                other projects I am working on.
-            </p>
-        </section>
+<!-- HERO -->
+<section class="hero">
+    <img src="images/profile.jpg" alt="Profile Picture">
 
-        <!-- Skills Section -->
-        <section class="skills">
-            <div class="skill-card">HTML</div>
-            <div class="skill-card">CSS</div>
-            <div class="skill-card">JavaScript</div>
-            <div class="skill-card">Git & GitHub</div>
-        </section>
+    <h1>Aireen Fariha</h1>
+    <p>Software Development Student | Web Developer | Problem Solver</p>
+</section>
 
-        <!-- Latest Blog Posts Section -->
-        <section class="latest-posts">
-            <h2>Latest Blog Posts</h2>
+<!-- ABOUT -->
+<section id="about" class="card">
+    <h2>About Me</h2>
+    <p>
+        I am a Software Development student from Faculty of Informatics and Computing (FIK).
+        I enjoy building clean and functional websites using modern web technologies.
+    </p>
+</section>
 
-            <article>
-                <h3>Learning JavaScript</h3>
-                <p>My experience learning JavaScript and building interactive websites.</p>
-            </article>
+<!-- SKILLS -->
+<section id="skills" class="card">
+    <h2>Skills</h2>
 
-            <article>
-                <h3>Responsive Web Design</h3>
-                <p>Tips and techniques for creating mobile-friendly websites.</p>
-            </article>
-        </section>
-    </main>
+    <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">GitHub</div>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        &copy; 2026 Aireen Fariha - My Personal Blog
-    </footer>
+<!-- BLOG -->
+<section id="blog" class="card">
+    <h2>Blog / Projects</h2>
 
-    <!-- Dark Mode Script -->
-    <script>
-        const darkModeBtn = document.getElementById('darkModeBtn');
-        darkModeBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
+    <div class="post">
+        <h3>Personal Blog Website</h3>
+        <p>Built using HTML, CSS and JavaScript with responsive design and dark mode feature.</p>
+    </div>
+
+    <div class="post">
+        <h3>Learning Journey</h3>
+        <p>Improving my web development skills step by step through practice and projects.</p>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="card">
+    <h2>Contact</h2>
+
+    <p>Email: aireenfariha16@gmail.com</p>
+    <p>GitHub: github.com/aireenfariha</p>
+    <p>Location: Johor, Malaysia</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Aireen Fariha | FIK Student Portfolio</p>
+</footer>
+
+<!-- DARK MODE -->
+<script>
+    const btn = document.getElementById("darkModeBtn");
+
+    btn.onclick = () => {
+        document.body.classList.toggle("dark-mode");
+    }
+</script>
+
 </body>
 </html>
