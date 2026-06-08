@@ -12,6 +12,7 @@
     --green-dark: #3d4f1f;
     --light: #f5f7f2;
     --white: #ffffff;
+    --accent: #b9d48c; /* links in dark mode */
 }
 
 /* ===== BODY ===== */
@@ -19,6 +20,7 @@ body {
     background: var(--light);
     color: #2f3b1c;
     line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
 }
 
 /* ===== HEADER ===== */
@@ -27,6 +29,7 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    transition: background 0.3s, color 0.3s;
 }
 
 header h1 {
@@ -62,7 +65,7 @@ button {
     cursor: pointer;
     background: #8FBC8F;
     color: white;
-    transition: 0.3s;
+    transition: 0.3s, background 0.3s, color 0.3s;
 }
 
 button:hover {
@@ -84,6 +87,7 @@ main {
     color: white;
     border-radius: 12px;
     margin-bottom: 30px;
+    transition: background 0.3s, color 0.3s;
 }
 
 .hero img {
@@ -102,7 +106,7 @@ main {
     margin-bottom: 20px;
     border-radius: 12px;
     box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-    transition: 0.3s;
+    transition: 0.3s, background 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
@@ -117,7 +121,7 @@ article.blog-card {
     border-left: 4px solid var(--green);
     background: #f7f9f3;
     border-radius: 12px;
-    transition: 0.3s;
+    transition: 0.3s, background 0.3s, color 0.3s, transform 0.3s;
 }
 
 article.blog-card:hover {
@@ -142,6 +146,7 @@ footer {
     background: var(--green-dark);
     color: white;
     margin-top: 40px;
+    transition: background 0.3s, color 0.3s;
 }
 
 /* ===== LINKS ===== */
@@ -156,7 +161,7 @@ a:hover {
 }
 
 body.dark-mode a {
-    color: #b9d48c;
+    color: var(--accent);
 }
 
 /* ===== DARK MODE ===== */
@@ -177,6 +182,14 @@ body.dark-mode header {
 
 body.dark-mode footer {
     background: #2f3b1c;
+}
+
+body.dark-mode button {
+    background: #556B2F;
+}
+
+body.dark-mode button:hover {
+    background: #3d4f1f;
 }
 
 /* ===== MOBILE RESPONSIVE ===== */
@@ -220,8 +233,14 @@ body.dark-mode footer {
     }
 }
 
-/* ===== FEATURE LIST ===== */
+@media screen and (max-width: 480px) {
+    .card, article.blog-card {
+        margin: 10px;
+        padding: 10px;
+    }
+}
 
+/* ===== FEATURE LIST ===== */
 .feature-list {
     list-style: none;
     padding-left: 0;
@@ -238,7 +257,6 @@ body.dark-mode footer {
 }
 
 /* ===== PROGRESS BAR ===== */
-
 .progress {
     width: 100%;
     height: 12px;
@@ -246,35 +264,22 @@ body.dark-mode footer {
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 15px;
+    transition: background 0.3s;
 }
 
 .progress-bar {
     height: 100%;
     border-radius: 20px;
     background: var(--green);
+    transition: width 1s ease-in-out, background 0.3s;
 }
 
-.html {
-    width: 90%;
-}
-
-.css {
-    width: 85%;
-}
-
-.js {
-    width: 75%;
-}
-
-.git {
-    width: 80%;
-}
+.html { width: 90%; }
+.css { width: 85%; }
+.js { width: 75%; }
+.git { width: 80%; }
 
 .hero-desc {
     max-width: 600px;
     margin: 15px auto 0;
-}
-
-body.dark-mode .progress {
-    background: #3a442b;
 }
