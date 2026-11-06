@@ -2,56 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Blog | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Aireen Fariha</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-    <h1>My Blog</h1>
-    <nav>
+    <h1>Aireen Fariha</h1>
+
+    <nav aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
+        <a href="blog.html" aria-current="page">Blog</a>
         <a href="contact.html">Contact</a>
     </nav>
-    <button id="darkModeBtn">🌙 Dark Mode</button>
+
+    <button id="darkModeBtn" type="button">Dark mode</button>
 </header>
 
-<section class="hero">
-    <h2>Welcome to My Blog</h2>
-    <p>Sharing my journey learning web development, coding tips, and projects.</p>
+<section class="hero no-photo">
+    <h2>Blog</h2>
+
+    <p class="hero-desc">
+        Sharing my journey learning web development, coding tips, and projects.
+    </p>
 </section>
 
-<main>
+<main class="blog-list">
 
-<article class="blog-card">
-    <h3>📚 Learning HTML & CSS</h3>
-    <p class="date">Published: 1 June 2026 | Category: Web Development</p>
-    <p>I started learning how to build responsive websites using HTML and CSS. I focused on layouts, styling, and making pages user-friendly.</p>
-</article>
+    <article class="blog-card">
+        <h3>Learning HTML &amp; CSS</h3>
+        <p class="date">Published: 1 June 2026 &nbsp;|&nbsp; Category: Web Development</p>
+        <p>
+            I started learning how to build responsive websites using HTML and CSS.
+            I focused on layouts, styling, and making pages user-friendly.
+        </p>
+    </article>
 
-<article class="blog-card">
-    <h3>💻 JavaScript Basics</h3>
-    <p class="date">Published: 5 June 2026 | Category: Web Development</p>
-    <p>Learning how to make websites interactive using JavaScript. I explored DOM manipulation, events, and simple animations.</p>
-</article>
+    <article class="blog-card">
+        <h3>JavaScript Basics</h3>
+        <p class="date">Published: 5 June 2026 &nbsp;|&nbsp; Category: Web Development</p>
+        <p>
+            Learning how to make websites interactive using JavaScript.
+            I explored DOM manipulation, events, and simple animations.
+        </p>
+    </article>
 
-<article class="blog-card">
-    <h3>🖥️ My First Portfolio Project</h3>
-    <p class="date">Published: 8 June 2026 | Category: Portfolio</p>
-    <p>I built my first personal portfolio website to showcase my projects, skills, and learning journey. I used HTML, CSS, and a bit of JavaScript for dark mode toggle.</p>
-</article>
+    <article class="blog-card">
+        <h3>My First Portfolio Project</h3>
+        <p class="date">Published: 8 June 2026 &nbsp;|&nbsp; Category: Portfolio</p>
+        <p>
+            I built my first personal portfolio website to showcase my projects,
+            skills, and learning journey. I used HTML, CSS, and a bit of JavaScript
+            for the dark mode toggle.
+        </p>
+    </article>
 
 </main>
 
 <footer>
-    © 2026 Aireen Fariha | FIK Project
+    &copy; 2026 Aireen Fariha | FIK Project
 </footer>
 
 <script>
-document.getElementById("darkModeBtn").onclick = () => {
-    document.body.classList.toggle("dark-mode");
+const btn = document.getElementById("darkModeBtn");
+btn.onclick = () => {
+    const dark = document.body.classList.toggle("dark-mode");
+    btn.textContent = dark ? "Light mode" : "Dark mode";
 };
 </script>
 
