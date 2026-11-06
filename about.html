@@ -2,68 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Aireen Fariha</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-    <h1>About Me</h1>
-    <nav>
+    <h1>Aireen Fariha</h1>
+
+    <nav aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        <a href="about.html" aria-current="page">About</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
     </nav>
-    <button id="darkModeBtn">🌙 Dark Mode</button>
+
+    <button id="darkModeBtn" type="button">Dark mode</button>
 </header>
 
 <section class="hero">
-    <img src="images/profile.jpg" alt="profile">
-    <h2>Hi, I'm Aireen Fariha</h2>
-    <p>Software Development student passionate about building modern web applications and solving problems creatively.</p>
+    <img src="images/profile.jpg" alt="Portrait of Aireen Fariha">
+
+    <h2>About Me</h2>
+
+    <p class="hero-desc">
+        Software Development student passionate about building modern
+        web applications and solving problems creatively.
+    </p>
 </section>
 
 <main>
 
-<div class="card">
-    <h2>🎓 Background</h2>
-    <p>
-        I am a Software Development student at the Faculty of Informatics and Computing (FIK). 
-        I enjoy building websites, learning new technologies, and exploring software solutions for real-world problems.
-    </p>
-</div>
+    <div class="card">
+        <h2>Background</h2>
+        <p>
+            I am a Software Development student at the Faculty of Informatics
+            and Computing (FIK). I enjoy building websites, learning new
+            technologies, and exploring software solutions for real-world problems.
+        </p>
+    </div>
 
-<div class="card">
-    <h2>💻 Skills</h2>
-    <ul>
-        <li>HTML5 & CSS3</li>
-        <li>JavaScript & DOM Manipulation</li>
-        <li>Git & GitHub</li>
-        <li>Problem Solving</li>
-        <li>Responsive Web Design</li>
-    </ul>
-</div>
+    <div class="card">
+        <h2>Skills</h2>
+        <ul class="feature-list">
+            <li>HTML5 &amp; CSS3</li>
+            <li>JavaScript &amp; DOM manipulation</li>
+            <li>Git &amp; GitHub</li>
+            <li>Problem solving</li>
+            <li>Responsive web design</li>
+        </ul>
+    </div>
 
-<div class="card">
-    <h2>🎯 Goal</h2>
-    <p>To become a full-stack developer and create meaningful, real-world applications that help people and businesses.</p>
-</div>
+    <div class="card">
+        <h2>Career Goal</h2>
+        <p>
+            To become a full-stack developer and create meaningful,
+            real-world applications that help people and businesses.
+        </p>
+    </div>
 
-<div class="card">
-    <h2>📌 Interests</h2>
-    <p>Web development, UX/UI design, coding challenges, and exploring new tech tools.</p>
-</div>
+    <div class="card">
+        <h2>Interests</h2>
+        <p>
+            Web development, UX/UI design, coding challenges,
+            and exploring new tech tools.
+        </p>
+    </div>
 
 </main>
 
 <footer>
-    © 2026 Aireen Fariha | FIK Project
+    &copy; 2026 Aireen Fariha | FIK Project
 </footer>
 
 <script>
-document.getElementById("darkModeBtn").onclick = () => {
-    document.body.classList.toggle("dark-mode");
+const btn = document.getElementById("darkModeBtn");
+btn.onclick = () => {
+    const dark = document.body.classList.toggle("dark-mode");
+    btn.textContent = dark ? "Light mode" : "Dark mode";
 };
 </script>
 
