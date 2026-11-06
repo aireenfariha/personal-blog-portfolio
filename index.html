@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Portfolio</title>
+    <title>Home | Aireen Fariha</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -11,38 +11,35 @@
 <header>
     <h1>Aireen Fariha</h1>
 
-    <nav>
-        <a href="index.html">Home</a>
+    <nav aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
         <a href="about.html">About</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
     </nav>
 
-    <button id="darkModeBtn">🌙 Dark Mode</button>
+    <button id="darkModeBtn" type="button">Dark mode</button>
 </header>
 
 <section class="hero">
-    <img src="images/profile.jpg" alt="Profile Picture">
+    <img src="images/profile.jpg" alt="Portrait of Aireen Fariha">
 
-    <h2>Welcome to My Portfolio</h2>
+    <h2>Software Development Student</h2>
 
-    <p>
-        Software Development Student • Web Developer • Problem Solver
-    </p>
+    <p>Web Development &nbsp;|&nbsp; Problem Solving</p>
 
     <p class="hero-desc">
-        This portfolio showcases my learning journey, projects,
-        technical skills, and interests in software development.
+        This portfolio presents my learning journey, projects,
+        technical skills, and professional interests in software development.
     </p>
 </section>
 
 <main>
 
     <div class="card">
-        <h2>👋 About Me</h2>
-
+        <h2>About Me</h2>
         <p>
-            Hi! I'm Aireen Fariha, a Software Development student at the
+            I'm Aireen Fariha, a Software Development student at the
             Faculty of Informatics and Computing (FIK).
             I enjoy learning new technologies and building websites
             that are useful, responsive, and user-friendly.
@@ -50,60 +47,52 @@
     </div>
 
     <div class="card">
-        <h2>✨ Portfolio Highlights</h2>
-
+        <h2>Portfolio Highlights</h2>
         <ul class="feature-list">
-            <li>Responsive Design</li>
-            <li>Dark Mode Feature</li>
-            <li>Multi-Page Portfolio Website</li>
-            <li>HTML, CSS & JavaScript</li>
-            <li>GitHub Repository Management</li>
+            <li>Responsive design</li>
+            <li>Light and dark display modes</li>
+            <li>Multi-page portfolio website</li>
+            <li>HTML, CSS and JavaScript</li>
+            <li>GitHub repository management</li>
         </ul>
     </div>
 
     <div class="card">
-        <h2>💻 Skills Preview</h2>
-
-        <p>HTML</p>
-        <div class="progress">
-            <div class="progress-bar html"></div>
-        </div>
-
-        <p>CSS</p>
-        <div class="progress">
-            <div class="progress-bar css"></div>
-        </div>
-
-        <p>JavaScript</p>
-        <div class="progress">
-            <div class="progress-bar js"></div>
-        </div>
-
-        <p>Git & GitHub</p>
-        <div class="progress">
-            <div class="progress-bar git"></div>
-        </div>
+        <h2>Career Goal</h2>
+        <p>
+            My goal is to become a skilled Full-Stack Developer
+            capable of building modern, impactful software
+            solutions for real-world users.
+        </p>
     </div>
 
     <div class="card">
-        <h2>🎯 Career Goal</h2>
+        <h2>Technical Skills</h2>
 
-        <p>
-            My goal is to become a skilled Full-Stack Developer
-            capable of building modern and impactful software
-            solutions for real-world users.
-        </p>
+        <div class="skill-row"><span>HTML</span><span>Advanced</span></div>
+        <div class="progress"><div class="progress-bar html"></div></div>
+
+        <div class="skill-row"><span>CSS</span><span>Advanced</span></div>
+        <div class="progress"><div class="progress-bar css"></div></div>
+
+        <div class="skill-row"><span>JavaScript</span><span>Intermediate</span></div>
+        <div class="progress"><div class="progress-bar js"></div></div>
+
+        <div class="skill-row"><span>Git &amp; GitHub</span><span>Intermediate</span></div>
+        <div class="progress"><div class="progress-bar git"></div></div>
     </div>
 
 </main>
 
 <footer>
-    © 2026 Aireen Fariha | FIK Project
+    &copy; 2026 Aireen Fariha | FIK Project
 </footer>
 
 <script>
-document.getElementById("darkModeBtn").onclick = () => {
-    document.body.classList.toggle("dark-mode");
+const btn = document.getElementById("darkModeBtn");
+btn.onclick = () => {
+    const dark = document.body.classList.toggle("dark-mode");
+    btn.textContent = dark ? "Light mode" : "Dark mode";
 };
 </script>
 
