@@ -279,3 +279,29 @@ main.blog-list {
 }
 
 .blog-card p:last-child { color: var(--muted); }
+
+/* ---------- Contact page ---------- */
+.contact-list {
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    gap: 0;
+}
+
+.contact-list dt,
+.contact-list dd {
+    padding: .85rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.contact-list dt { font-weight: 600; color: var(--text); }
+.contact-list dd { color: var(--muted); }
+.contact-list dt:last-of-type,
+.contact-list dd:last-of-type { border-bottom: 0; }
+
+.card a { color: var(--blue); font-weight: 500; }
+.card a:hover { text-decoration: none; }
+
+@media (max-width: 520px) {
+    .contact-list { grid-template-columns: 1fr; }
+    .contact-list dt { padding-bottom: 0; border-bottom: 0; }
+}
